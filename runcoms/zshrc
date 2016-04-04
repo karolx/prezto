@@ -15,4 +15,7 @@ fi
 
 PATH=~/bin:$PATH
 
+export NVM_DIR="$HOME/.nvm"
+source "$(brew --prefix nvm)/nvm.sh"
+
 source $HOME/.aliases
