@@ -50,6 +50,11 @@ function prompt_paradox_build_prompt {
   else
     prompt_paradox_start_segment white black ' %n'
   fi
+
+  if [[ -n "$WST_HOST_NAME" ]]; then
+    prompt_paradox_start_segment 192 black "$WST_HOST_NAME"
+  fi
+
   prompt_paradox_start_segment blue black '$_prompt_paradox_pwd'
 
   if [[ -n "$git_info" ]]; then
