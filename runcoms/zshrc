@@ -10,9 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# Vagrant for beacon
-export VAGRANT_CPUS=4
+# Source local config if exist
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc_local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc_local"
+fi
